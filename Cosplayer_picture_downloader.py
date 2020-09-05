@@ -22,9 +22,12 @@ if check.status_code == 200:
     soup = BeautifulSoup(web_page.content,"html.parser");
     index=[];
     ul = soup.ul;
-    if ul == None:
-      print("server time out.Please try again in a few minutes.");
+    div = soup.find_all("div")[7];
+    if div.text == "Matching data could not be found":
+      print(div.text);
       raise SystemExit;
+    elif ul == None:
+      print("server time out,please wait 1 minutes")
     else:  
       hr = ul.find_all("a");
       for hre in hr:
@@ -99,6 +102,7 @@ if check.status_code == 200:
       with open (path ,"wb")as file : file.write(image_scrape.content);
       new_count -= 1;
       x += 1;
+      print("picture "+translate+" .download complete");
     print("file location"+folder);
   
   if int(select) == 1:
@@ -108,8 +112,8 @@ if check.status_code == 200:
     new_choosy = choosy(new_page);
     download(new_page,new_choosy);
   elif int(select) == 2:
-    print("scriptng by ShoeraRei");
-    print("v1.3");
+    print("script by Novaldy");
+    print("v1.6");
   elif int(select) == 3:
     raise SystemExit;
   else:
