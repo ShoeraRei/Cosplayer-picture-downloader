@@ -108,7 +108,7 @@ if check.status_code == 200:
     new_choosy = choosy(new_page);
     download(new_page,new_choosy);
   elif int(select) == 2:
-    print("scriptng by Novaldy");
+    print("scriptng by ShoeraRei");
     print("v1.3");
   elif int(select) == 3:
     raise SystemExit;
