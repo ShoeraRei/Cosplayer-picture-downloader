@@ -22,7 +22,7 @@ if check.status_code == 200:
     soup = BeautifulSoup(web_page.content,"html.parser");
     index=[];
     ul = soup.ul;
-    if ul == "":
+    if ul == None:
       print("server time out.Please try again in a few minutes.");
       raise SystemExit;
     else:  
