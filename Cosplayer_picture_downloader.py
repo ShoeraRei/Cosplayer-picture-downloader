@@ -27,7 +27,8 @@ if check.status_code == 200:
       print(div.text);
       raise SystemExit;
     elif ul == None:
-      print("server time out,please wait 1 minutes")
+      print("server time out,please wait 1 minutes");
+      raise SystemExit;
     else:  
       hr = ul.find_all("a");
       for hre in hr:
@@ -98,7 +99,7 @@ if check.status_code == 200:
       image_link = take_link[0:len(take_link)-12]+"/"+translate+".jpg";
       join_image_link = image_link;
       image_scrape = scrape.get(join_image_link);
-      path = folder+translate+".jpg";
+      path = folder+translate+".txt";
       with open (path ,"wb")as file : file.write(image_scrape.content);
       new_count -= 1;
       x += 1;
@@ -113,7 +114,7 @@ if check.status_code == 200:
     download(new_page,new_choosy);
   elif int(select) == 2:
     print("script by Novaldy");
-    print("v1.6");
+    print("v1.7");
   elif int(select) == 3:
     raise SystemExit;
   else:
