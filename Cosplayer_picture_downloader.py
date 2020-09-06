@@ -99,7 +99,7 @@ if check.status_code == 200:
       image_link = take_link[0:len(take_link)-12]+"/"+translate+".jpg";
       join_image_link = image_link;
       image_scrape = scrape.get(join_image_link);
-      path = folder+translate+".txt";
+      path = folder+translate+".jpg";
       with open (path ,"wb")as file : file.write(image_scrape.content);
       new_count -= 1;
       x += 1;
