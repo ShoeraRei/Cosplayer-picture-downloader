@@ -129,7 +129,7 @@ if check.status_code == 200:
     ranking_download = download(ranking_page,ranking_choosy);
   
   elif int(select) == 3:
-    print("script by Novaldy");
+    print("script by ShoeraRei");
     print("v1.8");
   elif int(select) == 4:
     raise SystemExit;
