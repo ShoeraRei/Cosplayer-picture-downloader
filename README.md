@@ -7,3 +7,6 @@ How to use :
 3.install library "pip install requests"
 4.install library "pip install cfscrape"
 5.run script
+
+Note:
+Please don't reupload my script again.
